@@ -1,0 +1,266 @@
+
+                
+                <!--------------------------------------------------------------------------------- sample 9 start --------------------------------------------------------------------------------->
+                <h4><b><p style="color:red;font-size:18px;">Utterance ID=000009, </p></b></h4>
+                <table class="audio_demos">
+                    <thead>
+                        <tr>
+                            <th style="text-align:center;">Mixture</th>
+                            <th style="text-align:center;">Clean</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-top:1px solid black">
+                            <!-- <td rowspan="2">
+                                <b>A</b>
+                            </td> -->
+                            <td>
+                                <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                    <source src="collections\mix\000009_1.1686.wav" type="audio/wav">
+                                </audio>
+                                <figure>
+                                  <img src="collections\mix\000009_1.1686_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample9_mix">
+                                </figure>
+                            </td>
+                            <td>
+                                <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                    <source src="collections\anechoic\000009_1.1686.wav" type="audio/wav">
+                                </audio>
+                                <figure>
+                                  <img src="collections\anechoic\000009_1.1686_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample9_anechoic">
+                                </figure>
+                            </td>
+                            
+                        </tr>
+                    </tbody>
+                    
+                </table>
+
+                <table class="audio_demos">
+                    <thead>
+                        <tr>
+                            <th style="text-align:center;">Methods</th>
+                            <th style="text-align:center;">1-Channel</th>
+                            <th style="text-align:center;">2-Channel</th>
+                            <th style="text-align:center;">4-Channel</th>
+                            <th style="text-align:center;">8-Channel</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr style="border-top:1px solid black">
+                            <td>
+                                <b>WPE</b>
+                            </td>
+                            <td>
+                                <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                    <source src="collections\1_channels\wpe\000009_1.1686.wav" type="audio/wav">
+                                </audio>
+                                <figure>
+                                  <img src="collections\1_channels\wpe\000009_1.1686_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample9_wpe1">
+                                </figure>
+                            </td>
+                            <td>
+                                <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                    <source src="collections\2_channels\wpe\000009_1.1686.wav" type="audio/wav">
+                                </audio>
+                                <figure>
+                                  <img src="collections\2_channels\wpe\000009_1.1686_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample9_wpe2">
+                                </figure>
+                            </td>
+                            <td>
+                                <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                    <source src="collections\4_channels\wpe\000009_1.1686.wav" type="audio/wav">
+                                </audio>
+                                <figure>
+                                  <img src="collections\4_channels\wpe\000009_1.1686_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample9_wpe4">
+                                </figure>
+                            </td>
+                            <td>
+                                <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                    <source src="collections\8_channels\wpe\000009_1.1686.wav" type="audio/wav">
+                                </audio>
+                                <figure>
+                                  <img src="collections\8_channels\wpe\000009_1.1686_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample9_wpe8">
+                                </figure>
+                            </td>
+                        </tr>
+                        <tr style="border-top:1px solid black">
+                            <td>
+                                <b>DNN-WPE</b>
+                            </td>
+                            <!-- <td>
+                                <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                    <source src="collections\1_channels\dnnwpe\000009_1.1686.wav" type="audio/wav">
+                                </audio>
+                                <figure>
+                                  <img src="collections\1_channels\dnnwpe\000009_1.1686_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample9_dnnwpe1">
+                                </figure>
+                            </td>
+                            <td>
+                                <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                    <source src="collections\2_channels\dnnwpe\000009_1.1686.wav" type="audio/wav">
+                                </audio>
+                                <figure>
+                                  <img src="collections\2_channels\dnnwpe\000009_1.1686_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample9_dnnwpe2">
+                                </figure>
+                            </td>
+                            <td>
+                                <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                    <source src="collections\4_channels\dnnwpe\000009_1.1686.wav" type="audio/wav">
+                                </audio>
+                                <figure>
+                                  <img src="collections\4_channels\dnnwpe\000009_1.1686_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample9_dnnwpe4">
+                                </figure>
+                            </td>
+                            <td>
+                                <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                    <source src="collections\8_channels\dnnwpe\000009_1.1686.wav" type="audio/wav">
+                                </audio>
+                                <figure>
+                                  <img src="collections\8_channels\dnnwpe\000009_1.1686_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample9_dnnwpe8">
+                                </figure>
+                            </td> -->
+                        </tr>
+                        <tr style="border-top:1px solid black">
+                            <td>
+                                <b>BUDDy (NCSN++)</b>
+                            </td>
+                            <td>
+                                <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                    <source src="collections\1_channels\buddy_ncsnpp\000009_1.1686.wav" type="audio/wav">
+                                </audio>
+                                <figure>
+                                  <img src="collections\1_channels\buddy_ncsnpp\000009_1.1686_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample9_ncsnpp">
+                                </figure>
+                            </td>
+                        </tr>
+                        <tr style="border-top:1px solid black">
+                            <td>
+                                <b>BUDDy (1D-UNet)</b>
+                            </td>
+                            <td>
+                                <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                    <source src="collections\1_channels\buddy_1dunet\000009_1.1686.wav" type="audio/wav">
+                                </audio>
+                                <figure>
+                                  <img src="collections\1_channels\buddy_1dunet\000009_1.1686_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample9_buddy1dunet">
+                                </figure>
+                            </td>
+                        </tr>
+                        <tr style="border-top:1px solid black">
+                            <td>
+                                <b>MC-BUDDy</b>
+                            </td>
+                            <td>
+                                <!-- <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                    <source src="collections\1_channels\mcbuddy\000009_1.1686.wav" type="audio/wav">
+                                </audio>
+                                <figure>
+                                  <img src="collections\1_channels\mcbuddy\000009_1.1686_stft.png" style="object-fit:contain; width:400px; height:150px" title="Figure 2: SMS-WSJ: sample 95_443c040a_444c0415">
+                                </figure> -->
+                            </td>
+                            <td>
+                                <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                    <source src="collections\2_channels\mcbuddy\000009_1.1686.wav" type="audio/wav">
+                                </audio>
+                                <figure>
+                                  <img src="collections\2_channels\mcbuddy\000009_1.1686_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample9_multi2">
+                                </figure>
+                            </td>
+                            <td>
+                                <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                    <source src="collections\4_channels\mcbuddy\000009_1.1686.wav" type="audio/wav">
+                                </audio>
+                                <figure>
+                                  <img src="collections\4_channels\mcbuddy\000009_1.1686_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample9_multi4">
+                                </figure>
+                            </td>
+                            <td>
+                                <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                    <source src="collections\8_channels\mcbuddy\000009_1.1686.wav" type="audio/wav">
+                                </audio>
+                                <figure>
+                                  <img src="collections\8_channels\mcbuddy\000009_1.1686_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample9_multi8">
+                                </figure>
+                            </td>
+                        </tr>
+                        <tr style="border-top:1px solid black">
+                            <td>
+                                <b>USD-DPS</b>
+                            </td>
+                            <td>
+                                <!-- <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                    <source src="collections\1_channels\usddps\000009_1.1686.wav" type="audio/wav">
+                                </audio>
+                                <figure>
+                                  <img src="collections\1_channels\usddps\000009_1.1686_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample9_usddps">
+                                </figure> -->
+                            </td>
+                            <td>
+                                <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                    <source src="collections\2_channels\usddps\000009_1.1686.wav" type="audio/wav">
+                                </audio>
+                                <figure>
+                                  <img src="collections\2_channels\usddps\000009_1.1686_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample9_usddps2">
+                                </figure>
+                            </td>
+                            <td>
+                                <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                    <source src="collections\4_channels\usddps\000009_1.1686.wav" type="audio/wav">
+                                </audio>
+                                <figure>
+                                  <img src="collections\4_channels\usddps\000009_1.1686_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample9_usddps4">
+                                </figure>
+                            </td>
+                            <td>
+                                <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                    <source src="collections\8_channels\usddps\000009_1.1686.wav" type="audio/wav">
+                                </audio>
+                                <figure>
+                                  <img src="collections\8_channels\usddps\000009_1.1686_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample9_usddps8">
+                                </figure>
+                            </td>
+                        </tr>
+                        <tr style="border-top:1px solid black">
+                            <td>
+                                <b>TF-GridNet</b>
+                            </td>
+                            <td>
+                              <!-- <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                  <source src="collections\1_channels\tfgridnet\000009_1.1686.wav" type="audio/wav">
+                              </audio>
+                              <figure>
+                                <img src="collections\1_channels\tfgridnet\000009_1.1686_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample9_tfgridnet1">
+                              </figure> -->
+                          </td>
+                          <td>
+                              <!-- <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                  <source src="collections\2_channels\tfgridnet\000009_1.1686.wav" type="audio/wav">
+                              </audio>
+                              <figure>
+                                <img src="collections\2_channels\tfgridnet\000009_1.1686_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample9_tfgridnet2">
+                              </figure> -->
+                          </td>
+                          <td>
+                              <!-- <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                  <source src="collections\4_channels\tfgridnet\000009_1.1686.wav" type="audio/wav">
+                              </audio>
+                              <figure>
+                                <img src="collections\4_channels\tfgridnet\000009_1.1686_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample9_tfgridnet4">
+                              </figure> -->
+                          </td>
+                          <td>
+                              <!-- <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                  <source src="collections\8_channels\tfgridnet\000009_1.1686.wav" type="audio/wav">
+                              </audio>
+                              <figure>
+                                <img src="collections\8_channels\tfgridnet\000009_1.1686_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample9_tfgridnet8">
+                              </figure> -->
+                          </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!--------------------------------------------------------------------------------- sample 9 end --------------------------------------------------------------------------------->
+
+                <br><br><br>
