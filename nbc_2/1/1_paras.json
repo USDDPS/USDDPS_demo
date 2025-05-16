@@ -1,0 +1,37 @@
+{
+    "index": 1,
+    "wavname": "000001_1.0863",
+    "reverb_path": "/work/hdd/bbzz/datasets/MERL-dereverb_signals/fixarr/wav16k/tt/mix/000001_1.0863.wav",
+    "clean_path": "/work/hdd/bbzz/datasets/MERL-dereverb_signals/fixarr/wav16k/tt/s1/000001_1.0863.wav",
+    "sample_rate": 16000,
+    "dataset": "MERL-dereverb",
+    "metrics": {
+        "id": 1,
+        "wavname": "1.wav",
+        "neg_si_sdr": -7.516216278076172,
+        "input_sdr": -0.22605273127555847,
+        "input_sdr_all": [
+            -0.22605273127555847
+        ],
+        "input_si_sdr": -3.114823818206787,
+        "input_si_sdr_all": [
+            -3.114823818206787
+        ],
+        "sdr_i": 9.878564327955246,
+        "sdr_all_i": [
+            9.87856388092041
+        ],
+        "si_sdr_i": 10.631040096282959,
+        "si_sdr_all_i": [
+            10.631040573120117
+        ],
+        "sdr": 9.652511596679688,
+        "sdr_all": [
+            9.652511596679688
+        ],
+        "si_sdr": 7.516216278076172,
+        "si_sdr_all": [
+            7.516216278076172
+        ]
+    }
+}

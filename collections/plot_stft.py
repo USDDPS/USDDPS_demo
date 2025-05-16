@@ -28,7 +28,7 @@ def save_stft(wav_path, fft_size, win_size, hop_size):
 
 def process_directory(base_dir, fft_size, win_size, hop_size):
     # match exactly x_channels/model_name/audio_name.wav
-    pattern = os.path.join(base_dir, '2_channels', 'dnnwpe','*.wav')
+    pattern = os.path.join(base_dir, '8_channels', 'nbc','*.wav')
     for wav_path in glob.glob(pattern):
         save_stft(wav_path, fft_size, win_size, hop_size)
 

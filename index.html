@@ -465,8 +465,7 @@ mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c {
 	        <div id="intro">
 				<h2><a class="subtitle">Brief Overview</a></h2>
                 
-                <p>We consider the problem of multi-channel single speaker dereverberation, where a microphone array recorded multi-channel mixtures are used to recover the clean anechoic speech. To solve this problem, we propose USD-DPS, Unsupervised Speech Dereverberation via Diffusion Posterior Sampling. USD-DPS uses an unconditional clean speech diffusion model as a strong prior, and then applies diffusion posterior sampling (DPS) to incorporate the multi-channel mixtures. At each diffusion sampling step, we estimate all microphone channels' room impulse responses (RIRs), which are further used to enforce a multi-channel mixture consistency constraint for diffusion guidance. For multi-channel RIR estimation, we estimate reference-channel RIR by optimizing RIR parameters of a sub-band RIR signal model, with the Adam optimizer. We estimate non-reference channel RIRs analytically using forward convolution prediction (FCP). We found that this combination gives a good balance between sampling efficiency and RIR prior modeling, which gives superior performance among unsupervised dereverberation approaches.
-
+                <p>We consider the problem of multi-channel single-speaker blind dereverberation, where multi-channel mixtures are used to recover the clean anechoic speech. To solve this problem, we propose USD-DPS, Unsupervised Speech Dereverberation via Diffusion Dosterior Sampling. USD-DPS uses an unconditional clean speech diffusion model as a strong prior to solve the problem by posterior sampling. At each diffusion sampling step, we estimate all microphone channels' room impulse responses (RIRs), which are further used to enforce a multi-channel mixture consistency constraint for diffusion guidance. For multi-channel RIR estimation, we estimate reference-channel RIR by optimizing RIR parameters of a sub-band RIR signal model, with the Adam optimizer. We estimate non-reference channels' RIRs analytically using forward convolutive prediction (FCP). We found that this combination provides a good balance between sampling efficiency and RIR prior modeling, which shows superior performance among unsupervised dereverberation approaches.
 
 
             <hr style="border: none; border-top: 3px dashed #999; margin: 30px 0;">
@@ -500,7 +499,7 @@ mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c {
                         <li><b>BUDDy (1D-UNet)</b>          - (takes 1-channel mixture input)</li>
                         <li><b>MC-BUDDy</b>                 - (takes 2/4/8-channels mixture input)</li>
                         <li><b>USD-DPS</b>                  - (takes 2/4/8-channels mixture input)</li>
-                        <!-- <li><b>TF-GridNet</b>               - (takes 1/2/4/8-channels mixture input)</li> -->
+                        <li><b>NBC</b>                      - (takes 2/4/8-channels mixture input)</li>
                     </ul>
                 <p></p>
 
@@ -742,39 +741,39 @@ mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c {
                         </tr>
                         <tr style="border-top:1px solid black">
                             <td>
-                                <b>TF-GridNet</b>
+                                <b>NBC</b>
                             </td>
                             <td>
                               <!-- <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
-                                  <source src="collections\1_channels\tfgridnet\000000_1.0537.wav" type="audio/wav">
+                                  <source src="collections\1_channels\nbc\000000_1.0537.wav" type="audio/wav">
                               </audio>
                               <figure>
-                                <img src="collections\1_channels\tfgridnet\000000_1.0537_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample0_tfgridnet1">
+                                <img src="collections\1_channels\nbc\000000_1.0537_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample0_nbc1">
                               </figure> -->
                           </td>
                           <td>
-                              <!-- <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
-                                  <source src="collections\2_channels\tfgridnet\000000_1.0537.wav" type="audio/wav">
+                              <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                  <source src="collections\2_channels\nbc\000000_1.0537.wav" type="audio/wav">
                               </audio>
                               <figure>
-                                <img src="collections\2_channels\tfgridnet\000000_1.0537_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample0_tfgridnet2">
-                              </figure> -->
+                                <img src="collections\2_channels\nbc\000000_1.0537_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample0_nbc2">
+                              </figure>
                           </td>
                           <td>
-                              <!-- <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
-                                  <source src="collections\4_channels\tfgridnet\000000_1.0537.wav" type="audio/wav">
+                              <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                  <source src="collections\4_channels\nbc\000000_1.0537.wav" type="audio/wav">
                               </audio>
                               <figure>
-                                <img src="collections\4_channels\tfgridnet\000000_1.0537_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample0_tfgridnet4">
-                              </figure> -->
+                                <img src="collections\4_channels\nbc\000000_1.0537_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample0_nbc4">
+                              </figure>
                           </td>
                           <td>
-                              <!-- <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
-                                  <source src="collections\8_channels\tfgridnet\000000_1.0537.wav" type="audio/wav">
+                              <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                  <source src="collections\8_channels\nbc\000000_1.0537.wav" type="audio/wav">
                               </audio>
                               <figure>
-                                <img src="collections\8_channels\tfgridnet\000000_1.0537_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample0_tfgridnet8">
-                              </figure> -->
+                                <img src="collections\8_channels\nbc\000000_1.0537_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample0_nbc8">
+                              </figure>
                           </td>
                         </tr>
                     </tbody>
@@ -1010,39 +1009,39 @@ mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c {
                         </tr>
                         <tr style="border-top:1px solid black">
                             <td>
-                                <b>TF-GridNet</b>
+                                <b>NBC</b>
                             </td>
                             <td>
                               <!-- <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
-                                  <source src="collections\1_channels\tfgridnet\000001_1.0863.wav" type="audio/wav">
+                                  <source src="collections\1_channels\nbc\000001_1.0863.wav" type="audio/wav">
                               </audio>
                               <figure>
-                                <img src="collections\1_channels\tfgridnet\000001_1.0863_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample1_tfgridnet1">
+                                <img src="collections\1_channels\nbc\000001_1.0863_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample1_nbc1">
                               </figure> -->
                           </td>
                           <td>
-                              <!-- <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
-                                  <source src="collections\2_channels\tfgridnet\000001_1.0863.wav" type="audio/wav">
+                              <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                  <source src="collections\2_channels\nbc\000001_1.0863.wav" type="audio/wav">
                               </audio>
                               <figure>
-                                <img src="collections\2_channels\tfgridnet\000001_1.0863_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample1_tfgridnet2">
-                              </figure> -->
+                                <img src="collections\2_channels\nbc\000001_1.0863_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample1_nbc2">
+                              </figure>
                           </td>
                           <td>
-                              <!-- <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
-                                  <source src="collections\4_channels\tfgridnet\000001_1.0863.wav" type="audio/wav">
+                              <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                  <source src="collections\4_channels\nbc\000001_1.0863.wav" type="audio/wav">
                               </audio>
                               <figure>
-                                <img src="collections\4_channels\tfgridnet\000001_1.0863_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample1_tfgridnet4">
-                              </figure> -->
+                                <img src="collections\4_channels\nbc\000001_1.0863_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample1_nbc4">
+                              </figure>
                           </td>
                           <td>
-                              <!-- <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
-                                  <source src="collections\8_channels\tfgridnet\000001_1.0863.wav" type="audio/wav">
+                              <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                  <source src="collections\8_channels\nbc\000001_1.0863.wav" type="audio/wav">
                               </audio>
                               <figure>
-                                <img src="collections\8_channels\tfgridnet\000001_1.0863_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample1_tfgridnet8">
-                              </figure> -->
+                                <img src="collections\8_channels\nbc\000001_1.0863_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample1_nbc8">
+                              </figure>
                           </td>
                         </tr>
                     </tbody>
@@ -1278,39 +1277,39 @@ mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c {
                         </tr>
                         <tr style="border-top:1px solid black">
                             <td>
-                                <b>TF-GridNet</b>
+                                <b>NBC</b>
                             </td>
                             <td>
                               <!-- <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
-                                  <source src="collections\1_channels\tfgridnet\000002_0.2769.wav" type="audio/wav">
+                                  <source src="collections\1_channels\nbc\000002_0.2769.wav" type="audio/wav">
                               </audio>
                               <figure>
-                                <img src="collections\1_channels\tfgridnet\000002_0.2769_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample2_tfgridnet1">
+                                <img src="collections\1_channels\nbc\000002_0.2769_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample2_nbc1">
                               </figure> -->
                           </td>
                           <td>
-                              <!-- <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
-                                  <source src="collections\2_channels\tfgridnet\000002_0.2769.wav" type="audio/wav">
+                              <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                  <source src="collections\2_channels\nbc\000002_0.2769.wav" type="audio/wav">
                               </audio>
                               <figure>
-                                <img src="collections\2_channels\tfgridnet\000002_0.2769_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample2_tfgridnet2">
-                              </figure> -->
+                                <img src="collections\2_channels\nbc\000002_0.2769_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample2_nbc2">
+                              </figure>
                           </td>
                           <td>
-                              <!-- <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
-                                  <source src="collections\4_channels\tfgridnet\000002_0.2769.wav" type="audio/wav">
+                              <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                  <source src="collections\4_channels\nbc\000002_0.2769.wav" type="audio/wav">
                               </audio>
                               <figure>
-                                <img src="collections\4_channels\tfgridnet\000002_0.2769_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample2_tfgridnet4">
-                              </figure> -->
+                                <img src="collections\4_channels\nbc\000002_0.2769_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample2_nbc4">
+                              </figure>
                           </td>
                           <td>
-                              <!-- <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
-                                  <source src="collections\8_channels\tfgridnet\000002_0.2769.wav" type="audio/wav">
+                              <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                  <source src="collections\8_channels\nbc\000002_0.2769.wav" type="audio/wav">
                               </audio>
                               <figure>
-                                <img src="collections\8_channels\tfgridnet\000002_0.2769_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample2_tfgridnet8">
-                              </figure> -->
+                                <img src="collections\8_channels\nbc\000002_0.2769_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample2_nbc8">
+                              </figure>
                           </td>
                         </tr>
                     </tbody>
@@ -1546,39 +1545,39 @@ mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c {
                         </tr>
                         <tr style="border-top:1px solid black">
                             <td>
-                                <b>TF-GridNet</b>
+                                <b>NBC</b>
                             </td>
                             <td>
                               <!-- <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
-                                  <source src="collections\1_channels\tfgridnet\000003_0.9862.wav" type="audio/wav">
+                                  <source src="collections\1_channels\nbc\000003_0.9862.wav" type="audio/wav">
                               </audio>
                               <figure>
-                                <img src="collections\1_channels\tfgridnet\000003_0.9862_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample3_tfgridnet1">
+                                <img src="collections\1_channels\nbc\000003_0.9862_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample3_nbc1">
                               </figure> -->
                           </td>
                           <td>
-                              <!-- <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
-                                  <source src="collections\2_channels\tfgridnet\000003_0.9862.wav" type="audio/wav">
+                              <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                  <source src="collections\2_channels\nbc\000003_0.9862.wav" type="audio/wav">
                               </audio>
                               <figure>
-                                <img src="collections\2_channels\tfgridnet\000003_0.9862_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample3_tfgridnet2">
-                              </figure> -->
+                                <img src="collections\2_channels\nbc\000003_0.9862_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample3_nbc2">
+                              </figure>
                           </td>
                           <td>
-                              <!-- <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
-                                  <source src="collections\4_channels\tfgridnet\000003_0.9862.wav" type="audio/wav">
+                              <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                  <source src="collections\4_channels\nbc\000003_0.9862.wav" type="audio/wav">
                               </audio>
                               <figure>
-                                <img src="collections\4_channels\tfgridnet\000003_0.9862_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample3_tfgridnet4">
-                              </figure> -->
+                                <img src="collections\4_channels\nbc\000003_0.9862_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample3_nbc4">
+                              </figure>
                           </td>
                           <td>
-                              <!-- <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
-                                  <source src="collections\8_channels\tfgridnet\000003_0.9862.wav" type="audio/wav">
+                              <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                  <source src="collections\8_channels\nbc\000003_0.9862.wav" type="audio/wav">
                               </audio>
                               <figure>
-                                <img src="collections\8_channels\tfgridnet\000003_0.9862_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample3_tfgridnet8">
-                              </figure> -->
+                                <img src="collections\8_channels\nbc\000003_0.9862_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample3_nbc8">
+                              </figure>
                           </td>
                         </tr>
                     </tbody>
@@ -1814,39 +1813,39 @@ mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c {
                         </tr>
                         <tr style="border-top:1px solid black">
                             <td>
-                                <b>TF-GridNet</b>
+                                <b>NBC</b>
                             </td>
                             <td>
                               <!-- <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
-                                  <source src="collections\1_channels\tfgridnet\000004_1.1737.wav" type="audio/wav">
+                                  <source src="collections\1_channels\nbc\000004_1.1737.wav" type="audio/wav">
                               </audio>
                               <figure>
-                                <img src="collections\1_channels\tfgridnet\000004_1.1737_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample4_tfgridnet1">
+                                <img src="collections\1_channels\nbc\000004_1.1737_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample4_nbc1">
                               </figure> -->
                           </td>
                           <td>
-                              <!-- <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
-                                  <source src="collections\2_channels\tfgridnet\000004_1.1737.wav" type="audio/wav">
+                              <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                  <source src="collections\2_channels\nbc\000004_1.1737.wav" type="audio/wav">
                               </audio>
                               <figure>
-                                <img src="collections\2_channels\tfgridnet\000004_1.1737_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample4_tfgridnet2">
-                              </figure> -->
+                                <img src="collections\2_channels\nbc\000004_1.1737_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample4_nbc2">
+                              </figure>
                           </td>
                           <td>
-                              <!-- <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
-                                  <source src="collections\4_channels\tfgridnet\000004_1.1737.wav" type="audio/wav">
+                              <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                  <source src="collections\4_channels\nbc\000004_1.1737.wav" type="audio/wav">
                               </audio>
                               <figure>
-                                <img src="collections\4_channels\tfgridnet\000004_1.1737_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample4_tfgridnet4">
-                              </figure> -->
+                                <img src="collections\4_channels\nbc\000004_1.1737_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample4_nbc4">
+                              </figure>
                           </td>
                           <td>
-                              <!-- <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
-                                  <source src="collections\8_channels\tfgridnet\000004_1.1737.wav" type="audio/wav">
+                              <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                  <source src="collections\8_channels\nbc\000004_1.1737.wav" type="audio/wav">
                               </audio>
                               <figure>
-                                <img src="collections\8_channels\tfgridnet\000004_1.1737_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample4_tfgridnet8">
-                              </figure> -->
+                                <img src="collections\8_channels\nbc\000004_1.1737_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample4_nbc8">
+                              </figure>
                           </td>
                         </tr>
                     </tbody>
@@ -2082,39 +2081,39 @@ mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c {
                         </tr>
                         <tr style="border-top:1px solid black">
                             <td>
-                                <b>TF-GridNet</b>
+                                <b>NBC</b>
                             </td>
                             <td>
                               <!-- <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
-                                  <source src="collections\1_channels\tfgridnet\000005_0.5164.wav" type="audio/wav">
+                                  <source src="collections\1_channels\nbc\000005_0.5164.wav" type="audio/wav">
                               </audio>
                               <figure>
-                                <img src="collections\1_channels\tfgridnet\000005_0.5164_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample5_tfgridnet1">
+                                <img src="collections\1_channels\nbc\000005_0.5164_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample5_nbc1">
                               </figure> -->
                           </td>
                           <td>
-                              <!-- <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
-                                  <source src="collections\2_channels\tfgridnet\000005_0.5164.wav" type="audio/wav">
+                              <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                  <source src="collections\2_channels\nbc\000005_0.5164.wav" type="audio/wav">
                               </audio>
                               <figure>
-                                <img src="collections\2_channels\tfgridnet\000005_0.5164_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample5_tfgridnet2">
-                              </figure> -->
+                                <img src="collections\2_channels\nbc\000005_0.5164_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample5_nbc2">
+                              </figure>
                           </td>
                           <td>
-                              <!-- <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
-                                  <source src="collections\4_channels\tfgridnet\000005_0.5164.wav" type="audio/wav">
+                              <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                  <source src="collections\4_channels\nbc\000005_0.5164.wav" type="audio/wav">
                               </audio>
                               <figure>
-                                <img src="collections\4_channels\tfgridnet\000005_0.5164_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample5_tfgridnet4">
-                              </figure> -->
+                                <img src="collections\4_channels\nbc\000005_0.5164_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample5_nbc4">
+                              </figure>
                           </td>
                           <td>
-                              <!-- <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
-                                  <source src="collections\8_channels\tfgridnet\000005_0.5164.wav" type="audio/wav">
+                              <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                  <source src="collections\8_channels\nbc\000005_0.5164.wav" type="audio/wav">
                               </audio>
                               <figure>
-                                <img src="collections\8_channels\tfgridnet\000005_0.5164_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample5_tfgridnet8">
-                              </figure> -->
+                                <img src="collections\8_channels\nbc\000005_0.5164_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample5_nbc8">
+                              </figure>
                           </td>
                         </tr>
                     </tbody>
@@ -2350,39 +2349,39 @@ mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c {
                         </tr>
                         <tr style="border-top:1px solid black">
                             <td>
-                                <b>TF-GridNet</b>
+                                <b>NBC</b>
                             </td>
                             <td>
                               <!-- <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
-                                  <source src="collections\1_channels\tfgridnet\000006_1.1995.wav" type="audio/wav">
+                                  <source src="collections\1_channels\nbc\000006_1.1995.wav" type="audio/wav">
                               </audio>
                               <figure>
-                                <img src="collections\1_channels\tfgridnet\000006_1.1995_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample6_tfgridnet1">
+                                <img src="collections\1_channels\nbc\000006_1.1995_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample6_nbc1">
                               </figure> -->
                           </td>
                           <td>
-                              <!-- <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
-                                  <source src="collections\2_channels\tfgridnet\000006_1.1995.wav" type="audio/wav">
+                              <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                  <source src="collections\2_channels\nbc\000006_1.1995.wav" type="audio/wav">
                               </audio>
                               <figure>
-                                <img src="collections\2_channels\tfgridnet\000006_1.1995_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample6_tfgridnet2">
-                              </figure> -->
+                                <img src="collections\2_channels\nbc\000006_1.1995_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample6_nbc2">
+                              </figure>
                           </td>
                           <td>
-                              <!-- <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
-                                  <source src="collections\4_channels\tfgridnet\000006_1.1995.wav" type="audio/wav">
+                              <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                  <source src="collections\4_channels\nbc\000006_1.1995.wav" type="audio/wav">
                               </audio>
                               <figure>
-                                <img src="collections\4_channels\tfgridnet\000006_1.1995_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample6_tfgridnet4">
-                              </figure> -->
+                                <img src="collections\4_channels\nbc\000006_1.1995_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample6_nbc4">
+                              </figure>
                           </td>
                           <td>
-                              <!-- <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
-                                  <source src="collections\8_channels\tfgridnet\000006_1.1995.wav" type="audio/wav">
+                              <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                  <source src="collections\8_channels\nbc\000006_1.1995.wav" type="audio/wav">
                               </audio>
                               <figure>
-                                <img src="collections\8_channels\tfgridnet\000006_1.1995_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample6_tfgridnet8">
-                              </figure> -->
+                                <img src="collections\8_channels\nbc\000006_1.1995_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample6_nbc8">
+                              </figure>
                           </td>
                         </tr>
                     </tbody>
@@ -2618,39 +2617,39 @@ mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c {
                         </tr>
                         <tr style="border-top:1px solid black">
                             <td>
-                                <b>TF-GridNet</b>
+                                <b>NBC</b>
                             </td>
                             <td>
                               <!-- <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
-                                  <source src="collections\1_channels\tfgridnet\000007_1.1564.wav" type="audio/wav">
+                                  <source src="collections\1_channels\nbc\000007_1.1564.wav" type="audio/wav">
                               </audio>
                               <figure>
-                                <img src="collections\1_channels\tfgridnet\000007_1.1564_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample7_tfgridnet1">
+                                <img src="collections\1_channels\nbc\000007_1.1564_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample7_nbc1">
                               </figure> -->
                           </td>
                           <td>
-                              <!-- <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
-                                  <source src="collections\2_channels\tfgridnet\000007_1.1564.wav" type="audio/wav">
+                              <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                  <source src="collections\2_channels\nbc\000007_1.1564.wav" type="audio/wav">
                               </audio>
                               <figure>
-                                <img src="collections\2_channels\tfgridnet\000007_1.1564_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample7_tfgridnet2">
-                              </figure> -->
+                                <img src="collections\2_channels\nbc\000007_1.1564_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample7_nbc2">
+                              </figure>
                           </td>
                           <td>
-                              <!-- <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
-                                  <source src="collections\4_channels\tfgridnet\000007_1.1564.wav" type="audio/wav">
+                              <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                  <source src="collections\4_channels\nbc\000007_1.1564.wav" type="audio/wav">
                               </audio>
                               <figure>
-                                <img src="collections\4_channels\tfgridnet\000007_1.1564_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample7_tfgridnet4">
-                              </figure> -->
+                                <img src="collections\4_channels\nbc\000007_1.1564_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample7_nbc4">
+                              </figure>
                           </td>
                           <td>
-                              <!-- <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
-                                  <source src="collections\8_channels\tfgridnet\000007_1.1564.wav" type="audio/wav">
+                              <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                  <source src="collections\8_channels\nbc\000007_1.1564.wav" type="audio/wav">
                               </audio>
                               <figure>
-                                <img src="collections\8_channels\tfgridnet\000007_1.1564_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample7_tfgridnet8">
-                              </figure> -->
+                                <img src="collections\8_channels\nbc\000007_1.1564_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample7_nbc8">
+                              </figure>
                           </td>
                         </tr>
                     </tbody>
@@ -2886,39 +2885,39 @@ mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c {
                         </tr>
                         <tr style="border-top:1px solid black">
                             <td>
-                                <b>TF-GridNet</b>
+                                <b>NBC</b>
                             </td>
                             <td>
                               <!-- <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
-                                  <source src="collections\1_channels\tfgridnet\000008_1.2623.wav" type="audio/wav">
+                                  <source src="collections\1_channels\nbc\000008_1.2623.wav" type="audio/wav">
                               </audio>
                               <figure>
-                                <img src="collections\1_channels\tfgridnet\000008_1.2623_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample8_tfgridnet1">
+                                <img src="collections\1_channels\nbc\000008_1.2623_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample8_nbc1">
                               </figure> -->
                           </td>
                           <td>
-                              <!-- <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
-                                  <source src="collections\2_channels\tfgridnet\000008_1.2623.wav" type="audio/wav">
+                              <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                  <source src="collections\2_channels\nbc\000008_1.2623.wav" type="audio/wav">
                               </audio>
                               <figure>
-                                <img src="collections\2_channels\tfgridnet\000008_1.2623_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample8_tfgridnet2">
-                              </figure> -->
+                                <img src="collections\2_channels\nbc\000008_1.2623_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample8_nbc2">
+                              </figure>
                           </td>
                           <td>
-                              <!-- <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
-                                  <source src="collections\4_channels\tfgridnet\000008_1.2623.wav" type="audio/wav">
+                              <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                  <source src="collections\4_channels\nbc\000008_1.2623.wav" type="audio/wav">
                               </audio>
                               <figure>
-                                <img src="collections\4_channels\tfgridnet\000008_1.2623_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample8_tfgridnet4">
-                              </figure> -->
+                                <img src="collections\4_channels\nbc\000008_1.2623_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample8_nbc4">
+                              </figure>
                           </td>
                           <td>
-                              <!-- <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
-                                  <source src="collections\8_channels\tfgridnet\000008_1.2623.wav" type="audio/wav">
+                              <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                  <source src="collections\8_channels\nbc\000008_1.2623.wav" type="audio/wav">
                               </audio>
                               <figure>
-                                <img src="collections\8_channels\tfgridnet\000008_1.2623_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample8_tfgridnet8">
-                              </figure> -->
+                                <img src="collections\8_channels\nbc\000008_1.2623_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample8_nbc8">
+                              </figure>
                           </td>
                         </tr>
                     </tbody>
@@ -3154,39 +3153,39 @@ mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c {
                         </tr>
                         <tr style="border-top:1px solid black">
                             <td>
-                                <b>TF-GridNet</b>
+                                <b>NBC</b>
                             </td>
                             <td>
                               <!-- <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
-                                  <source src="collections\1_channels\tfgridnet\000009_1.1686.wav" type="audio/wav">
+                                  <source src="collections\1_channels\nbc\000009_1.1686.wav" type="audio/wav">
                               </audio>
                               <figure>
-                                <img src="collections\1_channels\tfgridnet\000009_1.1686_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample9_tfgridnet1">
+                                <img src="collections\1_channels\nbc\000009_1.1686_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample9_nbc1">
                               </figure> -->
                           </td>
                           <td>
-                              <!-- <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
-                                  <source src="collections\2_channels\tfgridnet\000009_1.1686.wav" type="audio/wav">
+                              <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                  <source src="collections\2_channels\nbc\000009_1.1686.wav" type="audio/wav">
                               </audio>
                               <figure>
-                                <img src="collections\2_channels\tfgridnet\000009_1.1686_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample9_tfgridnet2">
-                              </figure> -->
+                                <img src="collections\2_channels\nbc\000009_1.1686_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample9_nbc2">
+                              </figure>
                           </td>
                           <td>
-                              <!-- <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
-                                  <source src="collections\4_channels\tfgridnet\000009_1.1686.wav" type="audio/wav">
+                              <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                  <source src="collections\4_channels\nbc\000009_1.1686.wav" type="audio/wav">
                               </audio>
                               <figure>
-                                <img src="collections\4_channels\tfgridnet\000009_1.1686_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample9_tfgridnet4">
-                              </figure> -->
+                                <img src="collections\4_channels\nbc\000009_1.1686_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample9_nbc4">
+                              </figure>
                           </td>
                           <td>
-                              <!-- <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
-                                  <source src="collections\8_channels\tfgridnet\000009_1.1686.wav" type="audio/wav">
+                              <audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                  <source src="collections\8_channels\nbc\000009_1.1686.wav" type="audio/wav">
                               </audio>
                               <figure>
-                                <img src="collections\8_channels\tfgridnet\000009_1.1686_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample9_tfgridnet8">
-                              </figure> -->
+                                <img src="collections\8_channels\nbc\000009_1.1686_stft.png" style="object-fit:contain; width:400px; height:150px" title="sample9_nbc8">
+                              </figure>
                           </td>
                         </tr>
                     </tbody>
